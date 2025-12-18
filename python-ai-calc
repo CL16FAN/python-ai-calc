@@ -1,0 +1,29 @@
+break
+            
+            num2 = float(num2_input)
+            
+            if operation == '+':
+                result = num1 + num2
+                print(f"{num1} + {num2} = {result}")
+            elif operation == '-':
+                result = num1 - num2
+                print(f"{num1} - {num2} = {result}")
+            elif operation == '*':
+                result = num1 * num2
+                print(f"{num1} * {num2} = {result}")
+            elif operation == '/':
+                if num2 == 0:
+                    print("Ошибка: деление на ноль невозможно!")
+                    continue
+                result = num1 / num2
+                print(f"{num1} / {num2} = {result}")
+            
+            print("-" * 40)
+            
+        except ValueError:
+            print("Ошибка: введите корректное число!")
+        except Exception as e:
+            print(f"Произошла ошибка: {e}")
+
+if name == "main":
+    calculator()
